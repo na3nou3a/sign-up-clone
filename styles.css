@@ -1,0 +1,308 @@
+@font-face {
+  font-family: AvenirNext;
+  src: url(./fonts/AvenirNextLTPro-Regular.otf);
+}
+
+:root {
+  --light-gray: #e9ecef;
+  --blue: #0077c5;
+  --blue-2: #0268ac;
+  --primary: #212529;
+  --secondary: #6c757d;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: AvenirNext, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--primary);
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--blue);
+}
+
+p {
+  color: var(--secondary);
+  line-height: 1.4;
+  /* margin-bottom: 1rem; */
+}
+
+/* Container */
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 1rem auto;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 80%;
+}
+
+div.modal-header p.temp-hide {
+  display: block;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .navbar {
+    display: flex;
+  }
+  div.modal-header p.temp-hide {
+    display: none;
+  }
+}
+
+.navbar > div {
+  margin-right: 0.6rem;
+}
+
+.navbar h6 {
+  color: var(--secondary);
+  margin-bottom: 0.4rem;
+  color: #505050;
+}
+.btn {
+  display: block;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  letter-spacing: 1.8px;
+  transition: all 0.4s linear;
+  padding: 0.5rem 0.6rem;
+  text-align: center;
+  font-weight: 400;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 5px;
+}
+
+.sign-in-btn,
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  color: #fff;
+  border-color: var(--primary);
+}
+.sign-in-btn i,
+.submit-btn i {
+  margin-right: 0.3rem;
+}
+
+.submit-btn {
+  width: 100%;
+  margin: 1rem 0;
+  border-color: transparent;
+}
+.submit-btn:hover {
+  background-color: var(--blue-2);
+}
+
+/* MAIN */
+main {
+  min-height: 100vh;
+}
+.section {
+  margin: 1.2rem auto;
+}
+.sm-section {
+  max-width: 400px;
+}
+.lg-section {
+  max-width: 100%;
+  font-size: 85%;
+  color: #505050;
+}
+
+.brand-container {
+  margin: 0 auto;
+}
+.brand {
+  max-width: 120px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.products {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.products li {
+  margin: 0 0.5rem;
+}
+
+.products a {
+  color: var(--secondary);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.products a:hover {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.products img {
+  margin-right: 0.2rem;
+  width: 25px;
+}
+
+.products h6 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1.7px;
+}
+
+/* sign-up-modal */
+.sign-up-modal {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  margin-bottom: 1rem;
+}
+.sign-up-modal p {
+  text-align: center;
+  padding: 0.25rem 0;
+}
+
+.sign-up-modal p.text-left {
+  text-align: left;
+}
+.sign-up-modal p.md-text {
+  font-size: 90%;
+  color: #757575;
+}
+
+.sign-up-modal p.sm-text {
+  font-size: 78%;
+}
+.sign-up-modal p.xsm-text {
+  font-size: 68%;
+}
+
+.modal-header {
+  padding: 1.5rem;
+}
+.modal-body {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.modal-body p {
+  margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+  padding: 0.25rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 1.7px;
+}
+
+.modal-footer {
+  padding: 1rem 0;
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body label {
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 0.7rem;
+  color: #404040;
+  font-weight: 400;
+}
+.modal-body label span {
+  color: #757575;
+}
+.modal-body input {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
+  margin-bottom: 0.7rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+.modal-body .password-input {
+  background-image: url('./img/unlock_16x16.png');
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+}
+.modal-body h6 {
+  text-align: center;
+  font-weight: 700;
+  color: #757575;
+  letter-spacing: 0.05px;
+  font-style: italic;
+  font-size: 90%;
+}
+.modal-body div.d-none {
+  display: none;
+}
+
+/* secondary nav */
+.secondary-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem 0;
+  margin-bottom: 0.2rem;
+}
+
+.secondary-nav li {
+  margin-right: 1rem;
+}
+
+.lg-section p {
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  color: #505050;
+  margin-bottom: 4rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #fff;
+  padding: 0.8rem;
+  font-size: 90%;
+}
+
+/* CLASSES */
+.sm-text {
+  font-size: 80%;
+}
+.text-secondary {
+  color: var(--secondary);
+}

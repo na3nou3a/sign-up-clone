@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- Reset Css -->
+    <link rel="stylesheet" href="./reset.css" />
+    <!-- my style -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Intuit Accounts - Sign Up</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="navbar">
+          <div>
+            <h6>Already have an intuit account?</h6>
+            <a href="#">I forgot my UserId or Password </a>
+          </div>
+          <button class="btn sign-in-btn">
+            <i class="fas fa-lock"></i>
+            <span>Sign In</span>
+          </button>
+        </nav>
+      </header>
+      <main>
+        <div class="section sm-section">
+          <div class="brand-container">
+            <a href="https://accounts.intuit.com">
+              <img class="brand" src="./img/Intuit_Logo1_120x.png" alt="logo" />
+            </a>
+          </div>
+          <ul class="products">
+            <li>
+              <a href="#">
+                <img src="./img/mint_25x.png" alt="" />
+                <h6>mint</h6>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/quickbooks_25x.png" alt="" />
+                <h6>quickbooks</h6>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/turbotax_25x.png" alt="" />
+                <h6>turbotax</h6>
+              </a>
+            </li>
+          </ul>
+          <!-- sign up modal -->
+          <div class="sign-up-modal">
+            <div class="modal-header">
+              <h2>Create an Intuit account</h2>
+              <p class="md-text">
+                One account for everything Intuit, including Mint.
+                <a href="#">Learn more</a>
+              </p>
+              <p class="md-text temp-hide">
+                Already have an account?<a href="#">Sign In</a>
+              </p>
+            </div>
+            <div class="modal-body">
+              <form>
+                <label for="email">email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  autofocus
+                />
+
+                <label for="phone">Phone <span>(recommended)</span></label>
+                <input type="tel" name="phone" id="phone" />
+                <p class="xsm-text text-left">
+                  Standard call, message, or data rates may apply.
+                </p>
+
+                <label for="password">Password</label>
+                <input
+                  class="password-input"
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                />
+                <div class="confirm d-none">
+                  <label for="confirm-password">Confirm password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="confirm-password"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn submit-btn">
+                  <i class="fas fa-lock"></i>
+                  <span>create account</span>
+                </button>
+                <p class="sm-text">
+                  By selecting Create account, you agree to our
+                  <a href="#">Terms</a> and have read and acknowledge our
+                  <a href="#">Global Privacy Statement</a> .
+                </p>
+                <h6>Updates effective on January 10, 2022</h6>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <p class="xsm-text">
+                Invisible reCAPTCHA by Google <a href="#">Privacy Policy</a> and
+                <a href="#">Terms of Use</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section lg-section">
+          <ul class="secondary-nav">
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+          <p>
+            © 2022 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB,
+            TurboTax, ProConnect and Mint are registered trademarks of Intuit
+            Inc. Terms and conditions, features, support, pricing, and service
+            options subject to change without notice.
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p><a href="#">Privacy Settings</a></p>
+    </footer>
+    <script>
+      const signupModal = document.querySelector('.modal-body');
+      const passwordInput = signupModal.querySelector('.password-input');
+      const confirmPassword = signupModal.querySelector('.confirm');
+      passwordInput.addEventListener('focus', showConfirm);
+      passwordInput.addEventListener('blur', hideConfirm);
+      function showConfirm() {
+        confirmPassword.classList.remove('d-none');
+      }
+
+      function hideConfirm() {
+        confirmPassword.classList.add('d-none');
+      }
+    </script>
+  </body>
+</html>
